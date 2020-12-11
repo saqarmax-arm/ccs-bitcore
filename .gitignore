@@ -1,14 +1,14 @@
 *.tar.gz
 
 *.exe
-src/qtum-cli
-src/qtum-tx
-src/qtumd
-src/bench/bench_qtum
-src/qt/qtum-qt
-src/qt/test/test_qtum-qt
-src/test/test_qtum
-src/test/test_qtum_fuzzy
+src/ccs-cli
+src/ccs-tx
+src/ccsd
+src/bench/bench_ccs
+src/qt/ccs-qt
+src/qt/test/test_ccs-qt
+src/test/test_ccs
+src/test/test_ccs_fuzzy
 
 # autoreconf
 Makefile.in

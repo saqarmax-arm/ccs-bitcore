@@ -52,7 +52,7 @@
     </message>
     </context>
 <context>
-    <name>QtumGUI</name>
+    <name>CcSGUI</name>
     <message>
         <source>&amp;Overview</source>
         <translation>&amp;கண்ணோட்டம்</translation>
@@ -90,8 +90,8 @@
         <translation>&amp;செய்தியை சரிசெய்...</translation>
     </message>
     <message>
-        <source>Qtum</source>
-        <translation>Qtum</translation>
+        <source>CcS</source>
+        <translation>CcS</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -706,10 +706,10 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>qtum-core</name>
+    <name>ccs-core</name>
     <message>
-        <source>Qtum Core</source>
-        <translation>Qtum மையம்</translation>
+        <source>CcS Core</source>
+        <translation>CcS மையம்</translation>
     </message>
     <message>
         <source>(default: %u)</source>

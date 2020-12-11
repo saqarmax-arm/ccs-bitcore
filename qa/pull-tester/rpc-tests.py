@@ -76,7 +76,7 @@ for arg in sys.argv[1:]:
 
 #Set env vars
 if "BITCOIND" not in os.environ:
-    os.environ["BITCOIND"] = BUILDDIR + '/src/qtumd' + EXEEXT
+    os.environ["BITCOIND"] = BUILDDIR + '/src/ccsd' + EXEEXT
 
 if EXEEXT == ".exe" and "-win" not in opts:
     # https://github.com/bitcoin/bitcoin/commit/d52802551752140cf41f0d9a225a43e84404d3e9
@@ -159,37 +159,37 @@ testScripts = [
     'listsinceblock.py',
     'p2p-leaktests.py',
 
-    #qtum
-    'qtum-8mb-block.py',
-    'qtum-dgp-gas-price-lingering-mempool-tx.py',
-    'qtum-opcreate.py',
-    'qtum-block-header.py',
-    'qtum-dgp.py',
-    'qtum-pos.py',
-    'qtum-callcontract.py',
-    'qtum-gas-limit.py',
-    'qtum-pos-segwit.py',
-    'qtum-combined-outputs-exceed-gas-limit.py',
-    'qtum-globals-state-changer.py',
-    'qtum-sendtocontract.py',
-    'qtum-condensing-txs.py',
-    'qtum-identical-refunds.py',
-    'qtum-soft-block-gas-limits.py',
-    'qtum-createcontract.py',
-    'qtum-many-value-refunds-from-same-tx.py',
-    'qtum-spend-op-call.py',
-    'qtum-create-eth-op-code.py',
-    'qtum-no-exec-call-disabled.py',
-    'qtum-state-root.py',
-    'qtum-dgp-block-size-restart.py',
-    'qtum-null-sender.py',
-    'qtum-transaction-prioritization.py',
-    'qtum-dgp-block-size-sync.py',
-    'qtum-opcall.py',
-    'qtum-assign-mpos-fees-to-gas-refund.py',
-    'qtum-gas-limit-overflow.py',
-    'qtum-immature-coinstake-spend.py',
-    'qtum-ignore-mpos-participant-reward.py',
+    #ccs
+    'ccs-8mb-block.py',
+    'ccs-dgp-gas-price-lingering-mempool-tx.py',
+    'ccs-opcreate.py',
+    'ccs-block-header.py',
+    'ccs-dgp.py',
+    'ccs-pos.py',
+    'ccs-callcontract.py',
+    'ccs-gas-limit.py',
+    'ccs-pos-segwit.py',
+    'ccs-combined-outputs-exceed-gas-limit.py',
+    'ccs-globals-state-changer.py',
+    'ccs-sendtocontract.py',
+    'ccs-condensing-txs.py',
+    'ccs-identical-refunds.py',
+    'ccs-soft-block-gas-limits.py',
+    'ccs-createcontract.py',
+    'ccs-many-value-refunds-from-same-tx.py',
+    'ccs-spend-op-call.py',
+    'ccs-create-eth-op-code.py',
+    'ccs-no-exec-call-disabled.py',
+    'ccs-state-root.py',
+    'ccs-dgp-block-size-restart.py',
+    'ccs-null-sender.py',
+    'ccs-transaction-prioritization.py',
+    'ccs-dgp-block-size-sync.py',
+    'ccs-opcall.py',
+    'ccs-assign-mpos-fees-to-gas-refund.py',
+    'ccs-gas-limit-overflow.py',
+    'ccs-immature-coinstake-spend.py',
+    'ccs-ignore-mpos-participant-reward.py',
 ]
 
 

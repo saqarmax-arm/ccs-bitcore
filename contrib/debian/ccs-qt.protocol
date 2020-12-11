@@ -1,0 +1,11 @@
+[Protocol]
+exec=ccs-qt '%u'
+protocol=ccs
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false

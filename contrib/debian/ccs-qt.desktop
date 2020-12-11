@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Bitcoin Core
+Comment=Connect to the CcS P2P Network
+Exec=ccs-qt %u
+Terminal=false
+Type=Application
+Icon=ccs128
+MimeType=x-scheme-handler/ccs;
+Categories=Office;Finance;

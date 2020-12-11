@@ -1,0 +1,6 @@
+usr/local/bin/ccs-qt usr/bin
+share/pixmaps/ccs32.xpm usr/share/pixmaps
+share/pixmaps/ccs16.xpm usr/share/pixmaps
+share/pixmaps/ccs128.png usr/share/pixmaps
+debian/ccs-qt.desktop usr/share/applications
+debian/ccs-qt.protocol usr/share/kde4/services/

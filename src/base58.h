@@ -116,7 +116,7 @@ public:
 
     CTxDestination Get() const;
     bool GetKeyID(CKeyID &keyID) const;
-    bool GetIndexKey(uint160& hashBytes, int& type) const; // qtum
+    bool GetIndexKey(uint160& hashBytes, int& type) const; // ccs
     bool IsScript() const;
     bool IsPubKeyHash() const;
 };

@@ -17,8 +17,8 @@ osx=true
 SIGNER=
 VERSION=
 commit=false
-url=https://github.com/qtumproject/qtum-bitcore
-ethurl=https://github.com/qtumproject/cpp-eth-qtum
+url=https://github.com/ccsproject/ccs-bitcore
+ethurl=https://github.com/ccsproject/cpp-eth-ccs
 proc=2
 mem=2000
 lxc=true
@@ -32,7 +32,7 @@ commitFiles=true
 read -d '' usage <<- EOF
 Usage: $scriptName [-c|u|v|b|s|B|o|h|j|m|] version
 
-Run this script from the directory containing the qtum-bitcore, gitian-builder, gitian.sigs, and qtum-detached-sigs.
+Run this script from the directory containing the ccs-bitcore, gitian-builder, gitian.sigs, and ccs-detached-sigs.
 
 Arguments:
 --signer signer          GPG signer to sign each build assert file
@@ -40,7 +40,7 @@ version		Version number, commit, or branch to build. If building a commit or bra
 
 Options:
 -c|--commit	Indicate that the version argument is for a commit or branch
--u|--url	Specify the URL of the repository. Default is https://github.com/qtumproject/qtum-bitcore
+-u|--url	Specify the URL of the repository. Default is https://github.com/ccsproject/ccs-bitcore
 -v|--verify 	Verify the gitian build
 -b|--build	Do a gitian build
 -s|--sign	Make signed binaries for Windows and Mac OSX
@@ -218,9 +218,9 @@ echo ${COMMIT}
 if [[ $setup = true ]]
 then
     sudo apt-get install ruby apache2 git apt-cacher-ng python-vm-builder qemu-kvm qemu-utils
-    git clone https://github.com/qtumproject/gitian.sigs.git
+    git clone https://github.com/ccsproject/gitian.sigs.git
     git clone https://github.com/devrandom/gitian-builder.git
-    git clone https://github.com/qtumproject/qtum-bitcore-detached-sigs.git
+    git clone https://github.com/ccsproject/ccs-bitcore-detached-sigs.git
     pushd ./gitian-builder
     if [[ -n "$USE_LXC" ]]
     then
@@ -248,7 +248,7 @@ then
 	    exit 1
 	fi
 	# Make output folder
-	mkdir -p ./qtum-binaries/${VERSION}
+	mkdir -p ./ccs-binaries/${VERSION}
 	
 	# Build Dependencies
 	echo ""
@@ -258,7 +258,7 @@ then
 	mkdir -p inputs
 	wget -N -P inputs $osslPatchUrl
 	wget -N -P inputs $osslTarUrl
-	make -C ../qtum-bitcore/depends download SOURCES_PATH=`pwd`/cache/common
+	make -C ../ccs-bitcore/depends download SOURCES_PATH=`pwd`/cache/common
 
 	 # Linux
 	 if [[ $linux = true ]]
@@ -266,9 +266,9 @@ then
          echo ""
 	     echo "Compiling ${VERSION} Linux"
 	     echo ""
-	     ./bin/gbuild -j ${proc} -m ${mem} --commit qtum-bitcore=${COMMIT},cpp-eth-qtum=develop --url qtum-bitcore=${url},cpp-eth-qtum=${ethurl} ../qtum-bitcore/contrib/gitian-descriptors/gitian-linux.yml
-	     ./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../qtum-bitcore/contrib/gitian-descriptors/gitian-linux.yml
-	     mv build/out/qtum-*.tar.gz build/out/src/qtum-*.tar.gz ../qtum-binaries/${VERSION}
+	     ./bin/gbuild -j ${proc} -m ${mem} --commit ccs-bitcore=${COMMIT},cpp-eth-ccs=develop --url ccs-bitcore=${url},cpp-eth-ccs=${ethurl} ../ccs-bitcore/contrib/gitian-descriptors/gitian-linux.yml
+	     ./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../ccs-bitcore/contrib/gitian-descriptors/gitian-linux.yml
+	     mv build/out/ccs-*.tar.gz build/out/src/ccs-*.tar.gz ../ccs-binaries/${VERSION}
 	 fi
 	# Windows
 	if [[ $windows = true ]]
@@ -276,10 +276,10 @@ then
 	    echo ""
 	    echo "Compiling ${VERSION} Windows"
 	    echo ""
-	    ./bin/gbuild -j ${proc} -m ${mem} --num-make 8 --commit qtum-bitcore=${COMMIT},cpp-eth-qtum=develop --url qtum-bitcore=${url},cpp-eth-qtum=${ethurl} ../qtum-bitcore/contrib/gitian-descriptors/gitian-win.yml
-	    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../qtum-bitcore/contrib/gitian-descriptors/gitian-win.yml
-	    mv build/out/qtum-*-win-unsigned.tar.gz inputs/qtum-win-unsigned.tar.gz
-	    mv build/out/qtum-*.zip build/out/qtum-*.exe ../qtum-binaries/${VERSION}
+	    ./bin/gbuild -j ${proc} -m ${mem} --num-make 8 --commit ccs-bitcore=${COMMIT},cpp-eth-ccs=develop --url ccs-bitcore=${url},cpp-eth-ccs=${ethurl} ../ccs-bitcore/contrib/gitian-descriptors/gitian-win.yml
+	    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../ccs-bitcore/contrib/gitian-descriptors/gitian-win.yml
+	    mv build/out/ccs-*-win-unsigned.tar.gz inputs/ccs-win-unsigned.tar.gz
+	    mv build/out/ccs-*.zip build/out/ccs-*.exe ../ccs-binaries/${VERSION}
 	fi
 	# Mac OSX
 	if [[ $osx = true ]]
@@ -287,10 +287,10 @@ then
 	    echo ""
 	    echo "Compiling ${VERSION} Mac OSX"
 	    echo ""
-	    ./bin/gbuild -j ${proc} -m ${mem} --commit qtum-bitcore=${COMMIT},cpp-eth-qtum=develop --url qtum-bitcore=${url},cpp-eth-qtum=${ethurl} ../qtum-bitcore/contrib/gitian-descriptors/gitian-osx.yml
-	    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../qtum-bitcore/contrib/gitian-descriptors/gitian-osx.yml
-	    mv build/out/qtum-*-osx-unsigned.tar.gz inputs/qtum-osx-unsigned.tar.gz
-	    mv build/out/qtum-*.tar.gz build/out/qtum-*.dmg ../qtum-binaries/${VERSION}
+	    ./bin/gbuild -j ${proc} -m ${mem} --commit ccs-bitcore=${COMMIT},cpp-eth-ccs=develop --url ccs-bitcore=${url},cpp-eth-ccs=${ethurl} ../ccs-bitcore/contrib/gitian-descriptors/gitian-osx.yml
+	    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../ccs-bitcore/contrib/gitian-descriptors/gitian-osx.yml
+	    mv build/out/ccs-*-osx-unsigned.tar.gz inputs/ccs-osx-unsigned.tar.gz
+	    mv build/out/ccs-*.tar.gz build/out/ccs-*.dmg ../ccs-binaries/${VERSION}
 	fi
 	popd
 
@@ -317,27 +317,27 @@ then
 	echo ""
 	echo "Verifying ${VERSION} Linux"
 	echo ""
-	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../qtum-bitcore/contrib/gitian-descriptors/gitian-linux.yml
+	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../ccs-bitcore/contrib/gitian-descriptors/gitian-linux.yml
 	# Windows
 	echo ""
 	echo "Verifying ${VERSION} Windows"
 	echo ""
-	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../qtum-bitcore/contrib/gitian-descriptors/gitian-win.yml
+	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../ccs-bitcore/contrib/gitian-descriptors/gitian-win.yml
 	# Mac OSX	
 	echo ""
 	echo "Verifying ${VERSION} Mac OSX"
 	echo ""	
-	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../qtum-bitcore/contrib/gitian-descriptors/gitian-osx.yml
+	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../ccs-bitcore/contrib/gitian-descriptors/gitian-osx.yml
 	# Signed Windows
 	echo ""
 	echo "Verifying ${VERSION} Signed Windows"
 	echo ""
-	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../qtum-bitcore/contrib/gitian-descriptors/gitian-osx-signer.yml
+	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../ccs-bitcore/contrib/gitian-descriptors/gitian-osx-signer.yml
 	# Signed Mac OSX
 	echo ""
 	echo "Verifying ${VERSION} Signed Mac OSX"
 	echo ""
-	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../qtum-bitcore/contrib/gitian-descriptors/gitian-osx-signer.yml	
+	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../ccs-bitcore/contrib/gitian-descriptors/gitian-osx-signer.yml	
 	popd
 fi
 
@@ -357,10 +357,10 @@ then
 	    echo ""
 	    echo "Signing ${VERSION} Windows"
 	    echo ""
-	    ./bin/gbuild -i --commit signature=${COMMIT} ../qtum-bitcore/contrib/gitian-descriptors/gitian-win-signer.yml
-	    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../qtum-bitcore/contrib/gitian-descriptors/gitian-win-signer.yml
-	    mv build/out/qtum-*win64-setup.exe ../qtum-binaries/${VERSION}
-	    mv build/out/qtum-*win32-setup.exe ../qtum-binaries/${VERSION}
+	    ./bin/gbuild -i --commit signature=${COMMIT} ../ccs-bitcore/contrib/gitian-descriptors/gitian-win-signer.yml
+	    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../ccs-bitcore/contrib/gitian-descriptors/gitian-win-signer.yml
+	    mv build/out/ccs-*win64-setup.exe ../ccs-binaries/${VERSION}
+	    mv build/out/ccs-*win32-setup.exe ../ccs-binaries/${VERSION}
 	fi
 	# Sign Mac OSX
 	if [[ $osx = true ]]
@@ -368,9 +368,9 @@ then
 	    echo ""
 	    echo "Signing ${VERSION} Mac OSX"
 	    echo ""
-	    ./bin/gbuild -i --commit signature=master ../qtum-bitcore/contrib/gitian-descriptors/gitian-osx-signer.yml
-	    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../qtum-bitcore/contrib/gitian-descriptors/gitian-osx-signer.yml
-	    mv build/out/qtum-osx-signed.dmg ../qtum-binaries/${VERSION}/qtum-${VERSION}-osx.dmg
+	    ./bin/gbuild -i --commit signature=master ../ccs-bitcore/contrib/gitian-descriptors/gitian-osx-signer.yml
+	    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../ccs-bitcore/contrib/gitian-descriptors/gitian-osx-signer.yml
+	    mv build/out/ccs-osx-signed.dmg ../ccs-binaries/${VERSION}/ccs-${VERSION}-osx.dmg
 	fi
 	popd
 

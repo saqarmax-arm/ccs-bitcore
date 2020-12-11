@@ -1,113 +1,113 @@
-What is Qtum?
+What is CcS?
 -------------
 
-Qtum is a decentralized blockchain project built on Bitcoin's UTXO model, with support for Ethereum Virtual Machine based smart contracts, and secured by a proof of stake consensus model. It achieves this through the revolutionary Account Abstraction Layer which allows the EVM to communicate with Qtum's Bitcoin-like UTXO blockchain. For more general information about Qtum as well as links to join our community, go to https://qtum.org
+CcS is a decentralized blockchain project built on Bitcoin's UTXO model, with support for Ethereum Virtual Machine based smart contracts, and secured by a proof of stake consensus model. It achieves this through the revolutionary Account Abstraction Layer which allows the EVM to communicate with CcS's Bitcoin-like UTXO blockchain. For more general information about CcS as well as links to join our community, go to https://ccs.org
 
-Welcome to the Qtum Ignition Main Network. This is the main network where the tokens hold value and should be guarded very carefully. If you are testing the network, or developing unstable software on Qtum, we highly recommend using either testnet or regtest mode. 
+Welcome to the CcS Ignition Main Network. This is the main network where the tokens hold value and should be guarded very carefully. If you are testing the network, or developing unstable software on CcS, we highly recommend using either testnet or regtest mode. 
 
-The major features of the Qtum network include:
+The major features of the CcS network include:
 
-1. Compatibility with the Ethereum Virtual Machine, which allows for compatibility with most existing Solidity based smart contracts. No special solidity compiler is required to deploy your smart contract to Qtum. 
-2. A Proof of Stake consensus system which is optimized for Qtum's contract model. Any user can stake and help to secure the network. There is no voting, master nodes, or minimum amount required. There have been transactions as small as 2 Qtum that have created blocks in the past. 
+1. Compatibility with the Ethereum Virtual Machine, which allows for compatibility with most existing Solidity based smart contracts. No special solidity compiler is required to deploy your smart contract to CcS. 
+2. A Proof of Stake consensus system which is optimized for CcS's contract model. Any user can stake and help to secure the network. There is no voting, master nodes, or minimum amount required. There have been transactions as small as 2 CcS that have created blocks in the past. 
 3. The Decentralized Governance Protocol is completely implemented and functional, which allows certain network parameters to be modified without a fork or other network disruption. This currently controls parameters like block size, gas prices, etc. 
-4. Uses the UTXO transaction model and is compatible with Bitcoin, allowing for existing tooling and workflows to be used with Qtum. This allows for the infamous SPV protocol to be used which is ideal for light wallets on mobile phones and IoT devices.
+4. Uses the UTXO transaction model and is compatible with Bitcoin, allowing for existing tooling and workflows to be used with CcS. This allows for the infamous SPV protocol to be used which is ideal for light wallets on mobile phones and IoT devices.
 
-Note: Qtum Core is considered beta software. We make no warranties or guarantees of its security or stability.
+Note: CcS Core is considered beta software. We make no warranties or guarantees of its security or stability.
 
-Qtum Documentation and Usage Resources
+CcS Documentation and Usage Resources
 ---------------
 
-These are some resources that might be helpful in understanding Qtum. Note that the unofficial documents are not created by the Qtum team.
+These are some resources that might be helpful in understanding CcS. Note that the unofficial documents are not created by the CcS team.
 
 Basic usage resources:
 
-* [Official Qtum Usage Guide](https://github.com/qtumproject/qtum/wiki/Qtum-Wallet-Tutorial)
-* [Unofficial Qtum staking tutorial](https://steemit.com/qtum/@cryptominder/qtum-staking-tutorial-using-qtum-qt)
-* [Unofficial Qtum staking tutorial on Raspberry Pi](https://steemit.com/qtum/@cryptominder/qtum-staking-tutorial-using-qtumd-on-a-raspberry-pi-3)
-* [Unofficial guide for keeping your wallet safe](https://steemit.com/qtum/@cryptominder/encrypting-backing-up-and-restoring-your-qtum-wallet)
-* [Block explorer](https://explorer.qtum.org)
-* [Unofficial block explorer](https://qtumexplorer.io/)
-* [Unofficial Raspberry Pi Web UI](https://github.com/rpiwalletui/qtum-ui)
+* [Official CcS Usage Guide](https://github.com/ccsproject/ccs/wiki/CcS-Wallet-Tutorial)
+* [Unofficial CcS staking tutorial](https://steemit.com/ccs/@cryptominder/ccs-staking-tutorial-using-ccs-qt)
+* [Unofficial CcS staking tutorial on Raspberry Pi](https://steemit.com/ccs/@cryptominder/ccs-staking-tutorial-using-ccsd-on-a-raspberry-pi-3)
+* [Unofficial guide for keeping your wallet safe](https://steemit.com/ccs/@cryptominder/encrypting-backing-up-and-restoring-your-ccs-wallet)
+* [Block explorer](https://explorer.ccs.org)
+* [Unofficial block explorer](https://ccsexplorer.io/)
+* [Unofficial Raspberry Pi Web UI](https://github.com/rpiwalletui/ccs-ui)
 
 Development resources:
 
-* [Deploying a custom token to Qtum](https://blog.qtum.org/qtum-custom-token-walkthrough-467d725fa27d)
-* [Early example faucet contract](http://earlz.net/view/2017/06/30/2144/the-qtum-sparknet-faucet)
-* [Unofficial Qtum Hello World tutorial](https://steemit.com/qtum/@cryptominder/quantum-qtum-blockchain-developer-tutorial-hello-world)
-* [Qtum Book - A Developer's Guide To QTUM](https://github.com/qtumproject/qtumbook)
+* [Deploying a custom token to CcS](https://blog.ccs.org/ccs-custom-token-walkthrough-467d725fa27d)
+* [Early example faucet contract](http://earlz.net/view/2017/06/30/2144/the-ccs-sparknet-faucet)
+* [Unofficial CcS Hello World tutorial](https://steemit.com/ccs/@cryptominder/quantum-ccs-blockchain-developer-tutorial-hello-world)
+* [CcS Book - A Developer's Guide To CCS](https://github.com/ccsproject/ccsbook)
 
-General Info about Qtum:
+General Info about CcS:
 
-* [Mainnet event AMA](https://www.reddit.com/r/Qtum/comments/6zs8t0/official_qtum_ama_thread_starts_at_10pm_beijing/)
-* [Qtum's PoS vs CASPER](https://www.reddit.com/r/Qtum/comments/788oa5/qtums_pos_vs_casper_and_the_nothingatstake_problem/)
-* [Technical article explaining Qtum's PoS model in depth](http://earlz.net/view/2017/07/27/1904/the-missing-explanation-of-proof-of-stake-version)
-* [Unofficial What is Qtum article](https://storeofvalue.github.io/posts/what-is-qtum-without-the-bullshit/)
+* [Mainnet event AMA](https://www.reddit.com/r/CcS/comments/6zs8t0/official_ccs_ama_thread_starts_at_10pm_beijing/)
+* [CcS's PoS vs CASPER](https://www.reddit.com/r/CcS/comments/788oa5/ccss_pos_vs_casper_and_the_nothingatstake_problem/)
+* [Technical article explaining CcS's PoS model in depth](http://earlz.net/view/2017/07/27/1904/the-missing-explanation-of-proof-of-stake-version)
+* [Unofficial What is CcS article](https://storeofvalue.github.io/posts/what-is-ccs-without-the-bullshit/)
 
 Developer's Tools
 -----------------
 
 * Smart contract deployment tool
-  * https://github.com/qtumproject/solar
+  * https://github.com/ccsproject/solar
 * DApp JavaScript Library
-  * https://github.com/qtumproject/qtumjs
-* A toolkit for building qtum light wallets
-  * https://github.com/qtumproject/qtumjs-wallet
-* CORS qtumd RPC proxy for DApp
-  * https://github.com/qtumproject/qtumportal
-* Docker images for running qtum services
-  * https://github.com/qtumproject/qtum-docker
-* HTTP API that powers the block explorer and the QTUM web wallet
-  * https://github.com/qtumproject/insight-api
+  * https://github.com/ccsproject/ccsjs
+* A toolkit for building ccs light wallets
+  * https://github.com/ccsproject/ccsjs-wallet
+* CORS ccsd RPC proxy for DApp
+  * https://github.com/ccsproject/ccsportal
+* Docker images for running ccs services
+  * https://github.com/ccsproject/ccs-docker
+* HTTP API that powers the block explorer and the CCS web wallet
+  * https://github.com/ccsproject/insight-api
 
 
-What is Qtum Core?
+What is CcS Core?
 ------------------
 
-Qtum Core is our primary mainnet wallet. It implements a full node and is capable of storing, validating, and distributing all history of the Qtum network. Qtum Core is considered the reference implementation for the Qtum network. 
+CcS Core is our primary mainnet wallet. It implements a full node and is capable of storing, validating, and distributing all history of the CcS network. CcS Core is considered the reference implementation for the CcS network. 
 
-Qtum Core currently implements the following:
+CcS Core currently implements the following:
 
-* Sending/Receiving Qtum
-* Sending/Receiving QRC20 tokens on the Qtum network
-* Staking and creating blocks for the Qtum network
+* Sending/Receiving CcS
+* Sending/Receiving QRC20 tokens on the CcS network
+* Staking and creating blocks for the CcS network
 * Creating and interacting with smart contracts
 * Running a full node for distributing the blockchain to other users
 * "Prune" mode, which minimizes disk usage
-* Regtest mode, which enables developers to very quickly build their own private Qtum network for Dapp testing
+* Regtest mode, which enables developers to very quickly build their own private CcS network for Dapp testing
 * Compatibility with the Bitcoin Core set of RPC commands and APIs
 
 Alternative Wallets
 -------------------
 
-Qtum Core uses a full node model, and thus requires downloading the entire blockchain. If you do not need the entire blockchain, and do not intend on developing smart contracts, it may be more ideal to use an alternative wallet such as one of our light wallets that can be synchronized in a matter of seconds. 
+CcS Core uses a full node model, and thus requires downloading the entire blockchain. If you do not need the entire blockchain, and do not intend on developing smart contracts, it may be more ideal to use an alternative wallet such as one of our light wallets that can be synchronized in a matter of seconds. 
 
-### Qtum Electrum
+### CcS Electrum
 
 A light wallet that supports the Ledger hardware wallet and is based on the well known Electrum wallet software. 
 
-Download: https://github.com/qtumproject/qtum-electrum/releases
+Download: https://github.com/ccsproject/ccs-electrum/releases
 
 ### iOS and Android Wallets
 
 These wallets run on mobile devices and synchronize quickly. 
 
-Android Download: https://play.google.com/store/apps/details?id=org.qtum.wallet
+Android Download: https://play.google.com/store/apps/details?id=org.ccs.wallet
 
-iOS Download: https://github.com/qtumproject/qtum-ios (open source, we are still working with Apple to get approval for their app store)
+iOS Download: https://github.com/ccsproject/ccs-ios (open source, we are still working with Apple to get approval for their app store)
 
 ### Ledger Chrome Wallet
 
 This light wallet runs in your Chrome browser as a browser extension. This wallet requires a Ledger device to use.
 
-How to install: https://ledger.zendesk.com/hc/en-us/articles/115003776913-How-to-install-and-use-Qtum-with-Ledger
+How to install: https://ledger.zendesk.com/hc/en-us/articles/115003776913-How-to-install-and-use-CcS-with-Ledger
 
 
-Building Qtum Core
+Building CcS Core
 ----------
 
 ### Build on Ubuntu
 
-This is a quick start script for compiling Qtum on  Ubuntu
+This is a quick start script for compiling CcS on  Ubuntu
 
 
     sudo apt-get install build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils git cmake libboost-all-dev
@@ -119,8 +119,8 @@ This is a quick start script for compiling Qtum on  Ubuntu
     # If you want to build the Qt GUI:
     sudo apt-get install libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler qrencode
 
-    git clone https://github.com/qtumproject/qtum-bitcore --recursive
-    cd qtum
+    git clone https://github.com/ccsproject/ccs-bitcore --recursive
+    cd ccs
 
     # Note autogen will prompt to install some more dependencies if needed
     ./autogen.sh
@@ -129,7 +129,7 @@ This is a quick start script for compiling Qtum on  Ubuntu
     
 ### Build on CentOS
 
-Here is a brief description for compiling Qtum on CentOS, for more details please refer to [the specific document](https://github.com/qtumproject/qtum/blob/master/doc/build-unix.md)
+Here is a brief description for compiling CcS on CentOS, for more details please refer to [the specific document](https://github.com/ccsproject/ccs/blob/master/doc/build-unix.md)
 
     # Compiling boost manually
     sudo yum install python-devel bzip2-devel
@@ -141,23 +141,23 @@ Here is a brief description for compiling Qtum on CentOS, for more details pleas
     ./b2 headers
     sudo ./b2 -j4 install
     
-    # Installing Dependencies for Qtum
+    # Installing Dependencies for CcS
     sudo yum install epel-release
     sudo yum install libtool libdb4-cxx-devel openssl-devel libevent-devel
     
     # If you want to build the Qt GUI:
     sudo yum install qt5-qttools-devel protobuf-devel qrencode-devel
     
-    # Building Qtum
-    git clone --recursive https://github.com/qtumproject/qtum.git
-    cd qtum
+    # Building CcS
+    git clone --recursive https://github.com/ccsproject/ccs.git
+    cd ccs
     ./autogen.sh
     ./configure
     make -j4
 
 ### Additional instructions for Ubuntu 14.04
 
-Ubuntu 14.04 has many packages that are out of date by default, so before building Qtum you must update these:
+Ubuntu 14.04 has many packages that are out of date by default, so before building CcS you must update these:
 
     #update cmake from source
     sudo apt-get install build-essential
@@ -217,16 +217,16 @@ Then install [Homebrew](https://brew.sh).
 
 NOTE: Building with Qt4 is still supported, however, could result in a broken UI. Building with Qt5 is recommended.
 
-#### Build Qtum Core
+#### Build CcS Core
 
-1. Clone the qtum source code and cd into `qtum`
+1. Clone the ccs source code and cd into `ccs`
 
-        git clone --recursive https://github.com/qtumproject/qtum-bitcore.git
-        cd qtum-bitcore
+        git clone --recursive https://github.com/ccsproject/ccs-bitcore.git
+        cd ccs-bitcore
 
-2.  Build qtum-core:
+2.  Build ccs-core:
 
-    Configure and build the headless qtum binaries as well as the GUI (if Qt is found).
+    Configure and build the headless ccs binaries as well as the GUI (if Qt is found).
 
     You can disable the GUI build by passing `--without-gui` to configure.
 
@@ -240,25 +240,25 @@ NOTE: Building with Qt4 is still supported, however, could result in a broken UI
 
 ### Run
 
-Then you can either run the command-line daemon using `src/qtumd` and `src/qtum-cli`, or you can run the Qt GUI using `src/qt/qtum-qt`
+Then you can either run the command-line daemon using `src/ccsd` and `src/ccs-cli`, or you can run the Qt GUI using `src/qt/ccs-qt`
 
-For in-depth description of Sparknet and how to use Qtum for interacting with contracts, please see [sparknet-guide](doc/sparknet-guide.md).
+For in-depth description of Sparknet and how to use CcS for interacting with contracts, please see [sparknet-guide](doc/sparknet-guide.md).
 
 License
 -------
 
-Qtum is GPLv3 licensed.
+CcS is GPLv3 licensed.
 
 Development Process
 -------------------
 
 The `master` branch is regularly built and tested, but is not guaranteed to be
-completely stable. [Tags](https://github.com/qtumproject/qtum/tags) are created
-regularly to indicate new official, stable release versions of Qtum.
+completely stable. [Tags](https://github.com/ccsproject/ccs/tags) are created
+regularly to indicate new official, stable release versions of CcS.
 
 The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md).
 
-Developer IRC can be found on Freenode at #qtum-dev.
+Developer IRC can be found on Freenode at #ccs-dev.
 
 Testing
 -------
